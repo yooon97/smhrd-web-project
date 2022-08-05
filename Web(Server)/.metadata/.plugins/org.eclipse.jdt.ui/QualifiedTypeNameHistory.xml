@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="model.MemberDAO"/>
+    <fullyQualifiedTypeName name="com.example.MemberDTO2"/>
+    <fullyQualifiedTypeName name="model.MemberDAO2"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.JDBC"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.DAO"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="com.example.MemberDTO"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.Message"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.MessageDAO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+    <fullyQualifiedTypeName name="com.smhrd.database.SqlSessionManager"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.BoardDAO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="javax.websocket.Session"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.martest"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.profileupdate"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.Follow"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.FollowDAO"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.ImageDAO"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.MarkerDAO"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.Marker"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.onePost"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.postreviseDAO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.Post"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.PostDAO"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.Member"/>
+    <fullyQualifiedTypeName name="com.smhrd.domain.MemberDAO"/>
+</qualifiedTypeNameHistroy>

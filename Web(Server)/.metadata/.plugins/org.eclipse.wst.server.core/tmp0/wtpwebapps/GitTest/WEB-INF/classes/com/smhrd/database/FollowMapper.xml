@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.smhrd.domain.FollowDAO">
+	<insert id="insertFol" parameterType="com.smhrd.domain.Follow">
+		INSERT INTO t_follow (follow_partner,follow_id,follow_dt) VALUES (#{follow_partner}, #{follow_id}, sysdate)
+	</insert>
+	
+
+	<select id="selectFollower" parameterType="String" resultType="com.smhrd.domain.Follow">
+		select * from t_follow where follow_id=#{follow_id}
+	</select>
+
+  <delete id="deleteFol" parameterType="com.smhrd.domain.Follow">
+    delete from t_follow where  follow_partner = #{follow_partner} and  follow_id = #{follow_id}
+  </delete>
+	</mapper>

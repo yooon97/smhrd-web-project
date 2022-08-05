@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.smhrd.domain.ImageDAO">
+	<insert id="insertImg" parameterType="com.smhrd.domain.Image">
+		INSERT INTO t_image (image_number,image_name) VALUES (#{image_number}, #{image_name})
+	</insert>
+	<select id = "SelectImg" parameterType="String" resultType="String">
+		select image_name from t_image where image_number = #{image_number}
+	</select>
+</mapper>

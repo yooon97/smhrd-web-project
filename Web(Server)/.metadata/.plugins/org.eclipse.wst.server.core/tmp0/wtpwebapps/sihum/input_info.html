@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="result.jsp" method="post">
+    <table border="1">
+        <h1>선호도 조사 시스템</h1>
+        <th>이름</th>
+        <th><input type="text"  name="name"></th>
+        <tr><!-- 첫번째 줄 시작 -->
+            <td>좋아하는 과일</td>
+            <td>
+                사과<input type="checkbox" value="사과" name="hobby">
+                멜론<input type="checkbox" value="멜론" name="hobby">
+                수박<input type="checkbox" value="수박" name="hobby">
+            </td>
+        </tr><!-- 첫번째 줄 끝 -->
+        <tr><!-- 두번째 줄 시작 -->
+            <tr align="center" >
+                <td colspan="2">
+                    <input type="submit" value="전송">
+                </td>
+        </tr>
+        </table>
+       </form>
+</body>
+</html>

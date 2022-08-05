@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="kr">
+	<head>
+	<meta charset="UTF-8">
+	<title>http://www.blueb.co.kr</title>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<span class="dropdown-el">
+    <input type="radio" name="sortType" value="Relevance" checked="checked" id="sort-relevance"><label for="sort-relevance">블루비</label>
+    <input type="radio" name="sortType" value="Popularity" id="sort-best"><label for="sort-best">네이버</label>
+    <input type="radio" name="sortType" value="PriceIncreasing" id="sort-low"><label for="sort-low">다음</label>
+    <input type="radio" name="sortType" value="PriceDecreasing" id="sort-high"><label for="sort-high">지마켓</label>
+    <input type="radio" name="sortType" value="ProductBrand" id="sort-brand"><label for="sort-brand">옥션</label>
+    <input type="radio" name="sortType" value="ProductName" id="sort-name"><label for="sort-name">인터파크</label>
+  </span>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script type="text/javascript">
+$('.dropdown-el').click(function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $(this).toggleClass('expanded');
+  $('#'+$(e.target).attr('for')).prop('checked',true);
+});
+$(document).click(function() {
+  $('.dropdown-el').removeClass('expanded');
+});
+</script>
+</body>
+</html>

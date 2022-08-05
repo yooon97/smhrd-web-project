@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="assets/css/loginstyle.css">
+<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+<div class="login-blank"></div>
+	<section class="login-form">
+		
+		<h1>LOGIN PAGE</h1>
+		<form action="Login">
+			<div class="int-area">
+				<input type="text" name="id" id="id" autocomplete="off" required>
+				<label for="id">ID</label>
+			</div>
+			<div class="int-area">
+				<input type="password" name="pw" id="pw" autocomplete="off" required>
+				<label for="pw">PASSWORD</label>
+			</div>
+			<div class = "btn-area"">
+				<button type="submit">LOGIN</button>
+			</div>
+		</form>
+		<div class="caption">
+			<a href="">Forgot Password?</a>
+		</div>
+	</section>	
+	
+	<script>
+        let id = document.querySelector('#id')
+        let pw = document.querySelector('#pw')
+        let btn = document.querySelector('#btn')
+
+        btn.addEventListener('click', () => {
+            if(id.value == "") {
+                label = id.nextElementSibling
+                label.classList.add('warning')
+                setTimeout(() => {
+                    label.classList.remove('warning')
+                }, 1500)
+            } else if(pw.value == "") {
+                label = pw.nextElementSibling
+                label.classList.add('warning')
+                setTimeout(() => {
+                    label.classList.remove('warning')
+                }, 1500)
+            }
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;images, WEB-INF, delete.html, index.html, join.jsp, Login.jsp, main.jsp&apos; to &apos;webapp&apos;" description="Move 7 resources to &apos;webapp&apos;" destination="src/main/webapp" element1="/GitTest/src/main/webapp/images" element2="/GitTest/src/main/webapp/WEB-INF" element3="/GitTest/src/main/webapp/delete.html" element4="/GitTest/src/main/webapp/index.html" element5="/GitTest/src/main/webapp/join.jsp" element6="/GitTest/src/main/webapp/Login.jsp" element7="/GitTest/src/main/webapp/main.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="7" stamp="1651647031767" updateReferences="true"/>
+</session>

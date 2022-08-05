@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+      
+<mapper namespace="com.smhrd.domain.MessageDAO">
+   <insert id="insertMessage" parameterType="com.smhrd.domain.Message">
+   insert into member_message values (#{sendnick},#{receivenick},#{message},sysdate)
+   </insert>
+	
+	<select id="selectMessage" parameterType="String" resultType="com.smhrd.domain.Message">
+		select * from member_message where receivenick = #{receivenick}
+	</select>
+
+</mapper>

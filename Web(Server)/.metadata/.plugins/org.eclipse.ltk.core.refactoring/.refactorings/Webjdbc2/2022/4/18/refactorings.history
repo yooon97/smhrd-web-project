@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;delete.html, join.html, Login.html, Main.jsp, select.html, selectAll.jsp, selectCheck.jsp, update.html&apos; to &apos;backup&apos;" description="Move 8 resources to &apos;backup&apos;" destination="src/main/webapp/backup" element1="src/main/webapp/delete.html" element2="src/main/webapp/join.html" element3="src/main/webapp/Login.html" element4="src/main/webapp/Main.jsp" element5="src/main/webapp/select.html" element6="src/main/webapp/selectAll.jsp" element7="src/main/webapp/selectCheck.jsp" element8="src/main/webapp/update.html" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="8" stamp="1651037120569" updateReferences="true"/>
+</session>

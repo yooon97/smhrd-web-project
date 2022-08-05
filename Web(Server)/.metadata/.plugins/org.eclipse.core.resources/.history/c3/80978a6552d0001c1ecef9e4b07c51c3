@@ -1,0 +1,298 @@
+<%@page import="com.smhrd.domain.Message"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.domain.MessageDAO"%>
+<%@page import="com.smhrd.domain.Member"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+   
+   
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Prologue by HTML5 UP</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+   content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/popup.css" />
+<link rel="stylesheet" href="assets/css/mainphoto.css" />
+<link rel="stylesheet" href="dist/needpopup.min.css">
+<script src="jquery-3.4.1.js"></script>
+
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body {
+	font: 20px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Lato', sans-serif;
+	
+	margin:0;
+	padding:0;
+	background: #FFE;
+}
+</style>
+</head>
+<body class="is-preload">
+
+	
+	
+   <!-- Header -->
+   <div id="header">
+
+      <div class="top">
+
+         <!-- Logo -->
+         <div id="logo">
+            <span class="image avatar48"><img src="images/avatar.jpg"
+               
+               alt="" /></span>
+               
+            <%
+              Member dto = (Member)session.getAttribute("loginMember");
+
+            String id = (String)session.getAttribute("nick");
+
+            
+            
+            if (dto == null) {
+            %>
+            <h1 id="title">로그인을 해주세요.</h1>
+            <p>로그인을 해주세요.</p>
+            <%
+            } else {
+               %><h1 id="title"><%= dto.getNick() %>님 환영합니다.</h1>
+               <p>로그인 환영합니다.</p>
+            <%
+ 
+             }   %>
+         </div>
+
+         <!-- Nav -->
+         <nav id="nav">
+            <ul>
+               <li><a href="main.jsp" id="top-link"><span class="icon solid fa-home">메인</span></a></li>
+               <li><a href="main.jsp" id="top-link"><span class="icon solid fa-home">게시물 작성</span></a></li>
+               <li><a href="main.jsp" id="top-link"><span class="icon solid fa-home">게시물 확인</span></a></li>
+               <li><a href="delete.html" id="about-link"><span class="icon solid fa-user">회원삭제</span></a></li>
+               <% if (dto == null) {%>
+               <li><a href="NewLogin.html" id="about-link"><span class="icon solid fa-user">로그인 / 회원가입</span></a></li>
+               <%}  else {%>
+               <li><a href="update.jsp" id="portfolio-link"><span class="icon solid fa-th">회원수정</span></a></li>
+               <li><a href="Logout" id="about-link"><span class="icon solid fa-user">로그아웃</span></a></li>
+               <%
+                }%>
+            </ul>
+         </nav>
+      </div>
+
+      <div class="bottom">
+
+         <!-- Social Icons -->
+         <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span
+                  class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-facebook-f"><span
+                  class="label">Facebook</span></a></li>
+            <li><a
+               href="https://github.com/2022-SMHRD-KDT-BigData-4/TRAVELARY_first_project"
+               class="icon brands fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon brands fa-dribbble"><span
+                  class="label">Dribbble</span></a></li>
+            <li><a href="#" class="icon solid fa-envelope"><span
+                  class="label">Email</span></a></li>
+         </ul>
+
+      </div>
+
+   </div>
+
+   <!-- Main -->
+   <div id="main">
+
+      <!-- Intro -->
+      <section id="top" class="one dark cover">
+         <div class="container">
+
+            <header>
+               <h2 class="alt">
+                  테스트중입니다. <strong>Prologue</strong>, a <a href="#">free</a>
+                  responsive<br /> 테스트중입니다. <a href="#">테스트</a>.
+               </h2>
+               <p>
+                  테스트<br /> 테스트.
+               </p>
+            </header>
+
+            <footer>
+               <a href="#portfolio" class="button scrolly">추천 글 보러가기</a>
+            </footer>
+
+         </div>
+      </section>
+      
+      
+      
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="two">
+         <div class="container">
+
+            <header>
+               <h2>기능소개</h2>
+            </header>
+
+            <p>기능 소개란.</p>
+<div class="wrap">
+<div class="tile"> 
+  <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTRfMjY4%2FMDAxNjQ5OTEyNTQ2NjEy.zIw5eGRMpExXZESQXe5hyN2cXou0pYIcI6Rngw35KXUg.98t9NwDmPG_DMPOrO9AB51m2ef0DiO4LkGluekn4Om0g.PNG.damsels%2F14.png&type=sc960_832'/>
+  <div class="text">
+  <h1>테스트 1</h1>
+  <h2 class="animate-text">테스트 1 입니다.</h2>
+  <p class="animate-text">테스트 1 입니다.~~~~</p>
+<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+ 
+
+
+<div class="tile"> 
+  <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MThfNTIg%2FMDAxNjUwMjc3MTAzNDE1.Ygl6JShdSD4qtj3Wkx_xQCfm9yAQ3HOz6ztJ3teQoKcg.lgSgjR-XycPcYtfTPFLaySk1jkekZem6F_msD7Z_jPQg.JPEG.whtnwjd189%2FKakaoTalk_20220418_190925288_02.jpg&type=sc960_832'/>
+  <div class="text">
+  <h1>테스트 1</h1>
+  <h2 class="animate-text">테스트 1 입니다.</h2>
+  <p class="animate-text">테스트 1 입니다.~~~~</p>
+<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+  
+  <div class="tile"> 
+  <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMzBfMjMz%2FMDAxNjQzNDc0MDY5ODQ1.c_plMTqCw53vksT6X3oezv6VqMRbESYp16GK8I-NfUgg.bNxjyul_znbVnhM_K_C6X6TPHDjGGwJkVqkiAieF1IYg.PNG.dunhill2400%2F%25BD%25BA%25C5%25A9%25B8%25B0%25BC%25A6_2022-01-30_%25BF%25C0%25C0%25FC_1.34.26.png&type=sc960_832'/>
+  <div class="text">
+  <h1>테스트 1</h1>
+  <h2 class="animate-text">테스트 1 입니다.</h2>
+  <p class="animate-text">테스트 1 입니다.~~~~</p>
+<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+</div>
+<div class="wrap">
+<div class="tile"> 
+  <img src='https://search.pstatic.net/common/?src=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F5701_000_40%2F20220329133003557_S49J5YST3.jpg%2FbG92ZWpqaW4yfDM0.jpg%3Ftype%3Dm936&type=sc960_832'/>
+  <div class="text">
+  <h1>테스트 1</h1>
+  <h2 class="animate-text">테스트 1 입니다.</h2>
+  <p class="animate-text">테스트 1 입니다.~~~~</p>
+<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+ 
+
+
+<div class="tile"> 
+  <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMTBfMzAw%2FMDAxNTQ0NDQyMjc4ODMz.--FJ00lqhPzJJmkPgFvfh1-XRM2SkuH9lA8NKVKMVHwg.hsrnUEGQThQVLRC4C5hnD2qFkkYw9IVUvg5my7c7m5Yg.JPEG.sarangzoong%2F20180802_230729_HDR.jpg&type=sc960_832'/>
+  <div class="text">
+  <h1>테스트 1</h1>
+  <h2 class="animate-text">테스트 1 입니다.</h2>
+  <p class="animate-text">테스트 1 입니다.~~~~</p>
+<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+  
+  <div class="tile"> 
+  <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20220409_296%2F164946348198999PqQ_JPEG%2F8807688541_1184993673.jpg_1200x1200.jpg&type=sc960_832'/>
+  <div class="text">
+  <h1>테스트 1</h1>
+  <h2 class="animate-text">테스트 1 입니다.</h2>
+  <p class="animate-text">테스트 1 입니다.~~~~</p>
+<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+</div>
+  
+  
+</div>
+            
+      </section>
+
+      <!-- About Me -->
+      <section id="about" class="three">
+         <div class="container">
+
+            <header>
+               <h2>기능소개</h2>
+            </header>
+
+            <a href="#" class="image featured"><img src="images/pic08.jpg"
+               alt="" /></a>
+
+            <p>기능 소개란.</p>
+
+         </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="four">
+         <div class="container">
+
+            <header>
+               <h2>기능소개</h2>
+            </header>
+
+            <p>기능 소개란.</p>
+            
+            
+
+            
+      </section>
+
+   </div>
+
+   <!-- Footer -->
+   <div id="footer">
+
+      <!-- Copyright -->
+      <ul class="copyright">
+         <li>&copy; 봄이 오겠조</li>
+         <li>Design: <a href="#">HTML5 UP</a></li>
+      </ul>
+
+   </div>
+
+   <!-- Scripts -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/jquery.scrolly.min.js"></script>
+   <script src="assets/js/jquery.scrollex.min.js"></script>
+   <script src="assets/js/browser.min.js"></script>
+   <script src="assets/js/breakpoints.min.js"></script>
+   <script src="assets/js/util.js"></script>
+   <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+</body>
+</html>

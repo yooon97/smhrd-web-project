@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.smhrd.domain.MarkerDAO">
+	<insert id="insertMarker" parameterType="com.smhrd.domain.Marker">
+		<!--  insert into t_user values (#{id}, #{pw}, #{nick})-->
+		INSERT INTO t_map (marker_name, latitude, longitude, marker_shape, user_id,marker_date) VALUES (#{marker_name}, #{LATITUDE}, #{LONGITUDE}, #{marker_shape}, #{user_id},#{marker_date})
+	</insert>
+	
+	<select id="selectUserMarker" parameterType="String" resultType="com.smhrd.domain.Marker">
+		select * from t_map where user_id = #{user_id} order by marker_seq desc
+	</select>
+	
+	<select id="selectDateMarker" parameterType="com.smhrd.domain.Marker" resultType="com.smhrd.domain.Marker">
+	select * from t_map where user_id = #{user_id} and marker_date = #{marker_date}
+	</select>
+
+	<delete id="deleteMarker" parameterType="String">
+		delete * from t_map where marker_seq = #{marker_seq}
+	</delete>
+	<select id="selectmakedMarker" parameterType="com.smhrd.domain.Marker" resultType="java.lang.String">
+		select  marker_seq from( 
+                select * from t_map where user_id = #{user_id} and LATITUDE=#{LATITUDE} and LONGITUDE=#{LONGITUDE} 
+                )
+	</select>
+	<select id="selectCarMar1" resultType="com.smhrd.domain.Marker">
+	select * from t_map where marker_shape = 1
+	</select>
+	<select id="selectCarMar2" resultType="com.smhrd.domain.Marker">
+	select * from t_map where marker_shape = 2
+	</select>
+	<select id="selectCarMar3" resultType="com.smhrd.domain.Marker">
+	select * from t_map where marker_shape = 3
+	</select>
+	<select id="selectCarMar4" resultType="com.smhrd.domain.Marker">
+	select * from t_map where marker_shape = 4
+	</select>
+	<select id="selectCarMar5" resultType="com.smhrd.domain.Marker">
+	select * from t_map where marker_shape = 5
+	</select>
+	
+	<select id="selectCarPo1" resultType="com.smhrd.domain.Post">
+	select * from t_post where post_category = 1
+	</select>
+	<select id="selectCarPo2" resultType="com.smhrd.domain.Post">
+	select * from t_post where post_category = 2
+	</select>
+	<select id="selectCarPo3" resultType="com.smhrd.domain.Post">
+	select * from t_post where post_category = 3
+	</select>
+	<select id="selectCarPo4" resultType="com.smhrd.domain.Post">
+	select * from t_post where post_category = 4
+	</select>
+	<select id="selectCarPo5" resultType="com.smhrd.domain.Post">
+	select * from t_post where post_category = 5
+	</select>
+	
+</mapper>

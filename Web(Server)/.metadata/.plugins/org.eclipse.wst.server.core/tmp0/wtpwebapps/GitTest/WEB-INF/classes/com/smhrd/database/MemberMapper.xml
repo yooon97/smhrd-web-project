@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.smhrd.domain.MemberDAO">
+	<insert id="insertMember" parameterType="com.smhrd.domain.Member">
+		<!--  insert into t_user values (#{id}, #{pw}, #{nick})-->
+		INSERT INTO t_user (user_id, user_pw, user_nick, user_status, user_auth, user_joindate) VALUES (#{user_id}, #{user_pw}, #{user_nick}, '상태메세지를 입력하세요.', 'N', sysdate)
+	</insert>
+	
+	<select id="selectMember" parameterType="com.smhrd.domain.Member" resultType="com.smhrd.domain.Member">
+		select * from t_user where user_id=#{user_id} and user_pw=#{user_pw}
+	</select>
+	
+	<update id="updateMember" parameterType="com.smhrd.domain.Member">
+		update t_user set user_nick=#{user_nick}, user_status=#{user_status} where user_id=#{user_id}
+	</update>
+	
+	<select id="selectAll" resultType="com.smhrd.domain.Member">
+		select * from t_user
+	</select>
+	
+	<select id="selectloginMem" parameterType="String" resultType="com.smhrd.domain.Member">
+		select * from t_user where user_id=#{id}
+	</select>
+	
+	<delete id="deleteMember" parameterType="com.smhrd.domain.Member">
+		delete from t_user where user_id = #{user_id} and user_pw =#{user_pw}
+	</delete>
+	
+  <select id="searchfollow" parameterType="String" resultType="com.smhrd.domain.Member">
+    select * from t_user where user_id=#{follow_partner}
+  </select>
+	
+</mapper>
